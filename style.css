@@ -1,0 +1,124 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 0.5s ease;
+}
+
+header {
+    background-color: #264653; /* Deep teal */
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+#content {
+    margin-top: 80px;
+}
+
+#bio,
+#portfolio {
+    padding: 2em;
+}
+
+#portfolio {
+    background-color: #f4f4f4;
+}
+
+.project {
+    margin-bottom: 2em;
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: #264653; /* Deep teal */
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    position: relative;
+    z-index: 1000;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    #bio,
+    #portfolio {
+        padding: 1em;
+    }
+}
+
+/* Dark Mode Styles */
+body.dark {
+    background-color: #222;
+    color: #fff;
+}
+
+header.dark {
+    background-color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#portfolio.dark {
+    background-color: #444;
+}
+
+footer.dark {
+    background-color: #333;
+}
+
+/* Animation for Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Colorful Elements */
+h2,
+h3 {
+    color: #264653; /* Deep teal */
+}
+
+.project {
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.play-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.play-icon {
+    font-size: 3em;
+    color: #fff;
+}
+
+.project:hover .play-overlay {
+    opacity: 1;
+    cursor: pointer;
+}
+
+
